@@ -1,5 +1,5 @@
 <?php
-require_once '../inc/db.php';
+require_once __DIR__ . '/../inc/db.php';
 $stmt = $db->query("SELECT id, email, is_admin FROM users");
 $users = $stmt->fetchAll();
 ?>
@@ -7,7 +7,7 @@ $users = $stmt->fetchAll();
 <html>
 <head>
   <title>User List</title>
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="/outreach-app/Sprints/sprint-1-authentication/assets/style.css">
 </head>
 <body>
   <h2>Registered Users</h2>
@@ -21,6 +21,6 @@ $users = $stmt->fetchAll();
       </tr>
     <?php endforeach; ?>
   </table>
-  <p><a href="../index.php">Back to Home</a></p>
+  <p><a href="/outreach-app/index.php">Back to Home</a></p>
 </body>
 </html>
